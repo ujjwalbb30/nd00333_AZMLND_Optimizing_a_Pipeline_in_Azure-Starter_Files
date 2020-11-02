@@ -58,8 +58,7 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
-    joblib.dump(model,'model.joblib')
-
+    
 if __name__ == '__main__':
     ds = TabularDatasetFactory.from_delimited_files("https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
     x, y = clean_data(ds)
