@@ -7,7 +7,7 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
-This dataset contains the data about different characteristics of people applying for loan from a bank (e.g. marital status, job specification, age, previous loan, defaulting status, education qualifications etc.) and we seek to predict wheather a person's application for a loan will get approved or not.
+This dataset contains the data about different characteristics of customers of a bank (e.g. marital status, job specification, age, previous loan, defaulting status, education qualifications etc.) and we seek to predict wheather a customer applied for a fixed term deposit.
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 The best performing model was a Logistic Regression model with parameter value of C (Inverse of Regularization strength) and max_iter (Maximum number of iterations taken for the solvers to converge) as '0.6065569080865363' and '200' respectively. It performed with an accuracy of 0.9108883575501195.
