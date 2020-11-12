@@ -41,3 +41,14 @@ It is evident that difference in the accuracy is 0.007 and VotingEnsemble model 
 Areas of improvement:
 (1) Since their is class imbalance as pointed by AutoML, we can try weighted Logistic Regression by using class_weights hyperparameter.
 (2) We can try to vary solver ( i.e. algorithm to use in the optimization problem) in Parameter Sampler. There is a possibility ( not certainly ) that 'sag' and 'saga' might give better results than default 'lbfgs' solver.
+
+
+## Attribution
+** I would like to mention the sources I was able to get the help from, to complete this insightful project
+(1) problem statement : https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml
+(2) ensemble models : https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml
+(3) HyperDriveConfig : https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.hyperdriveconfig?view=azure-ml-py
+(4) Parameter Sampler : https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.randomparametersampling?view=azure-ml-py
+(5) Early Termination Policy : https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.banditpolicy?view=azure-ml-py
+(6) SKLearn Estimator : https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.sklearn.sklearn?view=azure-ml-py
+(7) AutoML : https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/classification-bank-marketing-all-features/auto-ml-classification-bank-marketing-all-features.ipynb
