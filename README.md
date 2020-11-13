@@ -39,9 +39,7 @@ It is evident that difference in the accuracy is 0.007 and VotingEnsemble model 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 Areas of improvement:
-(1) Since their is class imbalance as pointed by AutoML, we can try weighted Logistic Regression by using class_weights hyperparameter.
-(2) We can try to vary solver ( i.e. algorithm to use in the optimization problem) in Parameter Sampler. There is a possibility ( not certainly ) that 'sag' and 'saga' might give better results than default 'lbfgs' solver.
-
+Since there is class imbalance as pointed by AutoML, we can try weighted Logistic Regression by using class_weights hyperparameter. Logistic Regression generally does not handle well the imbalanced data. So, we can try to modify the training algorithm to take the imbalance in data in account. To achieve this, we can feed class_weights parameter some values that will have an effect on updation of logistic regression coefficients during the training. The class_weights can be decided either by tuning ( i.e. hyperparameter search e.g. grid search) or by using a general best practice ( e.g. using the inverse of the class distribution ). Defining appropriate class_weights will result in penalizing the model less for errors made on samples belonging to majority class and also in penalizing the model more for errors made on sample belonging to minority class. Therefore, there is a possibility to achieve a Logistic Regression Model giving a better classification result on this imbalanced data. 
 
 ## Attribution
 ** I would like to mention the sources I was able to get the help from, to complete this insightful project
@@ -52,3 +50,4 @@ Areas of improvement:
 (5) Early Termination Policy : https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.banditpolicy?view=azure-ml-py
 (6) SKLearn Estimator : https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.sklearn.sklearn?view=azure-ml-py
 (7) AutoML : https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/classification-bank-marketing-all-features/auto-ml-classification-bank-marketing-all-features.ipynb
+(8) Cost-sensitive Logistic Regression : https://machinelearningmastery.com/cost-sensitive-logistic-regression/
